@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+:root {
+    --color: #4d4637;
+    --color2: #EEE5E5;
+    --bg-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    font-family: 'BIZ UDPMincho';
+    color: var(--color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 5rem 0 2.5rem;
+    text-shadow: 0 2px 0 #C0C0C0, 0 3px 0 #C0C0C0, 0 4px 10px rgba(0, 0, 0, .5);
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* **************************header********************** */
+
+.headerWrap {
+    background-image: url(../images/back_mokume1.png);
+    background-position: 50% 10%;
+    /* 画像の表示位置 */
+    background-size: cover;
+}
+
+.headerItem {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.headerWrap img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+}
+
+/* **************************header_nav,navmedia********************** */
+#headerNav {
+    width: 100%;
+    background-color: var(--color2);
+    transition: .7s;
+    position: fixed;
+    z-index: 100;
+    /* レスポンシブ時は、消したい */
+}
+
+.headerNavmedia {
+    width: 100%;
+    background-color: var(--color2);
+    transition: .7s;
+    position: fixed;
+    z-index: 100;
+    border-radius: 10px;
+    display: none;
+    /* レスポンシブ時は、消したい */
+}
+
+.drawer {
+    display: none;
+}
+
+#headerNav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 1rem;
+}
+
+.headerNavmedia ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 0.25rem;
+}
+
+#headerNav ul a,
+.headerNavmedia ul a {
+    padding: 0.5rem;
+    display: block;
+}
+
+/* aタグのインライン部分だけたとリンクボタン押しにくいのでdisplay:block;かけてpadding指定するといい */
+#headerNav a:hover,
+.headerNavmedia a:hover {
+    opacity: 0.7;
+    font-weight: bolder;
+    background-color: var(--color);
+    color: white;
+}
+
+/* ***************************main********************* */
+
+main {
+    background-image: url(../images/back_green.jpg);
+    background-repeat: repeat;
+    /* background-size: cover; */
+}
+
+.mainWrapper {
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.swiper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.swiper-wrapper {
+    width: 100%;
+}
+
+/* 芯からあったまろ */
+.swiper h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    /* @keyframesでtranslateかけると上書きされてしまうので、上記の記載が効かなくなる
+    @keyframesのtransform: translateY(350px);を→translate(-50%,350px);に変更してあげる */
+    font-size: 40px;
+    padding: 0.5rem;
+    background-color: white;
+    z-index: 50;
+    animation-name: atamaro;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+}
+
+@keyframes atamaro {
+    0% {
+        transform: translate(-50%, 350px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -20px);
+        opacity: 0.5;
+    }
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    /* はみ出したら切ってください */
+}
+
+.swiper-slide img {
+    display: inline-block;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.swiper-wrapper .swiper-slide {
+    z-index: -1;
+}
+
+/* ***************************concept********************* */
+.conceptBoxcontainer {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.conceptBoxcontainer h3 {
+    font-size: 40px;
+}
+
+.conceptBoxcontainer ul {
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+/* ***************************news********************* */
+
+.newscontainer {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.newscontainer .newsImage {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.newscontainer .newsText {
+    width: 70%;
+    display: flex;
+    width: 31rem;
+    border-bottom: 1px solid var(--color);
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.newscontainer .newsText h4 {
+    width: 12rem;
+}
+
+#newTextBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#newTextBox a:hover {
+    opacity: 0.7;
+    text-decoration: underline solid var(--color);
+}
+
+
+/* ***************************menu********************* */
+#menuWrapper h3 {
+    font-size: 32px;
+    margin-top: 1.25rem;
+}
+
+.menuBoxcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
+#menuWrapper .menuBox {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.125rem;
+    padding: 1rem;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+}
+
+#menuWrapper .menuImagecircle {
+    width: calc(100% / 2 - 1.125rem);
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1.125rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#menuWrapper .menuImage,
+#menuWrapper .menuText {
+    width: calc(100% / 2 - 1.125rem);
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1.125rem;
+    border-radius: 1.25rem;
+    margin: 0 auto;
+}
+
+#menuWrapper .menuText {
+    width: 100%;
+    width: 44.5%;
+    height: 44.5%;
+    font-size: 24px;
+    background-color: white;
+    z-index: 50;
+}
+
+#menuWrapper .menuImagecircle img {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    /* object-position: center; 個別に指示したいので削除*/
+}
+
+/* imgにかけるとできる */
+#menuWrapper .menuImage img {
+    border-radius: 20px;
+}
+
+/* ********************ここからmenuimg位置調整******************** */
+.drink1 img {
+    object-position: 60%;
+}
+
+#menuWrapper .drink2 img {
+    transform: scale(1.125)translateY(10px);
+    object-position: 55% 40%;
+}
+
+#menuWrapper .drink3 img {
+    transform: scale(1.55)translateX(5px);
+    object-position: 100% 115%;
+}
+
+#menuWrapper .drink4 img {
+    transform: scale(1.35)translateY(10px)translateX(-15px);
+    object-position: 120% 100%;
+}
+
+/* #menuWrapper .food1 img {
+    transform: scale(1.0);
+    object-position:center;
+} */
+
+#menuWrapper .sweets3 img {
+    transform: scale(1.30)translateY(-3.5px);
+    object-position: 100% 100%;
+}
+
+#menuWrapper .sweets4 img {
+    transform: scale(1.1);
+    object-position: 75% 100%;
+}
+
+/* ***************************sns********************* */
+.snscontainer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid var(--border);
+}
+
+.tiktokbox .twitterbox {
+    max-width: 400px;
+    max-height: 470px;
+    display: inline-block;
+}
+
+/* ***************************access********************* */
+.accesscontainer {
+    width: 100%;
+    display: flex;
+    background-color: var(--bg-color);
+    gap: 2rem;
+    padding: 1rem;
+
+}
+
+.accesscontainer .accesscText {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accesscontainer .accesscText .storename {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.accesscontainer .shinkibusLink:hover {
+    opacity: 0.7;
+    text-decoration: underline solid var(--color) 2px;
+}
+
+.iframeBox {
+    width: 60%;
+    height: auto;
+}
+
+.Googlemap {
+    width: 100%;
+    height: 350px;
+}
+
+.Googlemap iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* *****************************footer******************* */
+footer {
+    background-image: url(../images/back_mokume1.png);
+    background-position: 50% 10%;
+    background-size: cover;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ************************************************ */
+
+@media (width < 768px) {
+
+    .swiper h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin: 2.5rem 0 1rem;
+    }
+
+    h3,
+    h4,
+    .menu p,
+    #menuWrapper h3,
+    .conceptBoxcontainer h3 {
+        font-size: 20px;
+    }
+
+    .newscontainer h4,
+    p,
+    ul {
+        font-size: 14px;
+    }
+
+    .newscontainer {
+        flex-wrap: wrap;
+    }
+
+    .newscontainer .newsText {
+        flex-direction: column;
+    }
+
+    .menuBoxcontainer {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+
+    .snscontainer,
+    .accesscontainer {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accesscontainer .accesscText {
+        width: 100%;
+    }
+
+    .accesscontainer .accesscText .storename {
+        width: 60%;
+    }
+}

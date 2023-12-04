@@ -1,0 +1,63 @@
+.loading_bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s linear;
+    background-image: url(../images/back_pink2.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4d4637;
+
+    & .loading_img {
+        width: 30vh;
+    }
+
+    & #rogo {
+        width: 10vh;
+    }
+}
+
+.load1 {
+    position: relative;
+    top: -80px;
+    animation: rogo 1.2s infinite alternate ease-in-out;
+}
+
+.load2 {
+    position: absolute;
+    animation: text 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes rogo {
+    from {
+        transform: rotate(-30deg);
+    }
+
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes text {
+    from {
+        transform: translateY(30px);
+    }
+
+    to {
+        transform: translateY(70px);
+    }
+}
+/* JSで付与するクラス。これによってクラスloading_bgが指定されている要素が消える */
+.active {
+    opacity: 0;
+    /* 透明人間なんで、触れる、居場所はある(透明にする) */
+    visibility: hidden;
+    /* 居なくなっているが、居場所はある */
+    display: none;
+    /* 存在を消す。触れないし、居場所もない */
+}
