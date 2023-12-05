@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="css/loding_animation.css">
     <script src="js/loading.js"></script>
     <link rel="stylesheet" href="css/drawer.css">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Opti:wght@700&display=swap"
-        rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -38,20 +33,6 @@
     </div><!-- loading_bg -->
 
     <header>
-        <div class="headerWrap">
-            <div class="headerItem">
-                <p><img src="images/maru_rogo1-2@1.5x.png" alt="rogo"></p>
-                <p><img src="images/Alfa_Slab_One_Regular@1.5x.png" alt="storename"></P>
-                <p><img src="images/maru_rogo1-2@1.5x.png" alt="hamburger" id="drawer"></p>
-            </div>
-            <!-- <button class="toggleButton"> -->
-            <button class="drawer"></button>
-            <!-- <span></span>
-                <span></span>
-                <span></span>
-            </button> -->
-        </div>
-
         <nav id="headerNav">
             <ul>
                 <li><a href="#">TOP</a></li>
@@ -78,6 +59,22 @@
                 <li><a href="#accessWrapper">ACCESS</a></li>
             </ul>
         </nav>
+
+        <div class="headerWrap">
+            <div class="headerItem">
+                <p><img src="images/maru_rogo1-2@1.5x.png" alt="rogo"></p>
+                <p><img src="images/Alfa_Slab_One_Regular@1.5x.png" alt="storename"></P>
+                <p><img src="images/maru_rogo1-2@1.5x.png" alt="hamburger" id="drawer"></p>
+            </div>
+            <!-- <button class="toggleButton"> -->
+            <button class="drawer"></button>
+            <!-- <span></span>
+                <span></span>
+                <span></span>
+            </button> -->
+        </div>
+        </div>
+
     </header>
 
     <main>
@@ -102,12 +99,14 @@
                 <h2>CONCEPT</h2>
                 <div class="conceptBoxcontainer">
                     <h3>新たな居場所でホッとしたひと時を</h3><br>
-                    <p>木の香りと足湯・オーナー自ら生豆から仕入れ自家焙煎したこだわりのコーヒーで実家に帰ってきたようなリラックスした時間をお過ごしください。
-                        なお、コーヒーが初めての方でも、飲みやすい口当たりの良いコーヒーもご用意しています。</p>
-                    <br><br>
-                    <p>冷えは万病の元と言われており、36.5℃以上に保つことが大切です。
-                        そこで、カフェカムパネルラでは、年中足湯を併設しております。
-                    </p>
+                    <div class="conceptText">
+                        <p>木の香りと足湯・オーナー自ら生豆から仕入れ自家焙煎したこだわりのコーヒーで実家に帰ってきたようなリラックスした時間をお過ごしください。
+                            なお、コーヒーが初めての方でも、飲みやすい口当たりの良いコーヒーもご用意しています。</p>
+                        <br><br>
+                        <p>冷えは万病の元と言われており、36.5℃以上に保つことが大切です。
+                            そこで、カフェカムパネルラでは、年中足湯を併設しております。
+                        </p>
+                    </div>
                     <br><br>
                     <ul>
                         <li>１.「リラックス効果で寝つきの改善に繋がる」</li>
@@ -127,7 +126,7 @@
                 <h2>NEWS</h2>
                 <div class="newscontainer">
                     <div class="newsImage">
-                        <img src="../images/sheep_3.jpg" alt="仮写真">
+                        <img src="images/sheep_3.jpg" alt="仮写真">
                     </div>
                     <div id="newTextBox">
                         <div class="newsText">
@@ -262,28 +261,30 @@
             <section id="snsWrapper">
                 <h2>SNS</h2>
                 <div class="snscontainer">
-
-                    <div class="tiktokbox">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@muu_daybyday"
-                            data-unique-id="muu_daybyday" data-embed-type="creator"
-                            style="max-width: 400px; max-height: 470px;">
-                            <div>
-                                <a target="_blank"
-                                    href="https://www.tiktok.com/@muu_daybyday?refer=creator_embed">@muu_daybyday</a>
-                            </div>
-                        </blockquote>
-                    </div> <!-- /.tiktokbox -->
-                    <div class="twitterbox">
-                        <a class="twitter-timeline" data-width="400" data-height="470" data-theme="light"
-                            href="https://twitter.com/aardman_jp?ref_src=twsrc%5Etfw">Tweets by aardman_jp</a>
-
-                        <!-- <a class="twitter-timeline" data-width="400" data-height="470"
-                        href="https://twitter.com/tabekko_cafe?ref_src=twsrc%5Etfw">Tweets by tabekko_cafe</a> -->
-                    </div><!-- twitterbox -->
-                </div><!-- /.snscontainer -->
-
-                <script async src="https://www.tiktok.com/embed.js"></script>
-                <script async src="https://platform.twitter.com/widgets.js"></script>
+                    <div class="sns">
+                        <div class="tiktokbox">
+                            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@muu_daybyday"
+                                data-unique-id="muu_daybyday" data-embed-type="creator"
+                                style="max-width: 400px; min-width: 288px;">
+                                <section> <a target="_blank"
+                                        href="https://www.tiktok.com/@muu_daybyday?refer=creator_embed">@muu_daybyday</a>
+                                </section>
+                            </blockquote>
+                        </div>
+                        <div class="twitterbox">
+                            <a class="twitter-timeline" data-width="400" data-height="390" data-theme="light"
+                                href="https://twitter.com/aardman_jp?ref_src=twsrc%5Etfw">Tweets by aardman_jp</a>
+                        </div>
+                        <script async src="https://www.tiktok.com/embed.js"></script>
+                        <script async src="https://platform.twitter.com/widgets.js"></script>
+                    </div>
+                    <div class="snsmadia">
+                        <P><a href="https://www.tiktok.com/@muu_daybyday?is_from_webapp=1&sender_device=pc"><img
+                                    src="images/tiktokicon.png" alt="tiktokicon"></a></P>
+                        <p><a href="https://x.com/aardman_jp?s=21&t=7TbHmQLq5IhaxCV8npxxcQ"><img
+                                    src="images/Twittericon.png" alt="twittericon"></a></p>
+                    </div>
+                </div>
             </section>
 
             <section id="accessWrapper">
@@ -317,7 +318,7 @@
             </section>
             <!-- /* ************************************************ */ -->
             <!-- <script src="js/common.js"></script> -->
-            <script src="js/drawerMenu.js"></script>
+            <script src="js/drawer.js"></script>
             <script>
                 const swiper = new Swiper('.swiper', {
                     // Optional parameters
@@ -351,7 +352,7 @@
 
     <!-- /* ************************************************ */ -->
     <footer>
-        <p><small>&copy;2023 kamon minami</small></p>
+        <p><small>&copy;2023 Campanella</small></p>
     </footer>
 </body>
 
