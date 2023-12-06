@@ -122,8 +122,17 @@ main {
 }
 
 .mainWrapper {
-    width: 100vw;
     max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* width:90%とか100以下にして調整するか、calc()計算を少し減らすか */
+
+#conceptWrapper,
+#newsWrapper,
+#menuWrapper,
+#accessWrapper {
+    width: clamp(200px, 98%, 1000px);
     margin: 0 auto;
 }
 
@@ -186,6 +195,7 @@ main {
 }
 
 /* ***************************concept********************* */
+
 .conceptBoxcontainer {
     font-size: 18px;
     background-color: var(--bg-color);
@@ -211,10 +221,8 @@ main {
 /* ***************************news********************* */
 
 .newscontainer {
-    width: clamp(200px, 97%, 1000px);
     height: auto;
     gap: 1rem;
-    /* text-align: center; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -222,9 +230,6 @@ main {
     border-radius: 20px;
     padding: 1rem;
 }
-
-/* width:90%とか100以下にして調整するか、calc()計算を少し減らすか */
-
 
 .newscontainer .newsImage {
     width: clamp(200px, 100%, 400px);
@@ -237,12 +242,10 @@ main {
 }
 
 .newscontainer #newTextBox {
-    width: 70%;
+    width: 90%;
 }
 
 .newscontainer .newsText {
-    /* width: 70%; */
-    /* width: 31rem; */
     display: flex;
     border-bottom: 1px solid var(--color);
     padding: 0.75rem 0;
@@ -389,18 +392,12 @@ main {
     border: 1px solid var(--border);
 }
 
-.sns{
+.sns {
     display: flex;
     justify-content: center;
-    gap:2rem;
+    gap: 2rem;
     margin: 0 auto;
 }
-/* .tiktokbox .twitterbox {
-    max-width: 400px;
-    max-height: 470px;
-    margin: 0;
-    display: inline-block;
-} */
 
 .snsmadia {
     display: none;
@@ -408,9 +405,10 @@ main {
     gap: 2rem;
 }
 
-.snscontainer .tiktok-embed{
+.snscontainer .tiktok-embed {
     margin: 0 auto;
 }
+
 /* ***************************access********************* */
 .accesscontainer {
     width: 100%;
@@ -465,17 +463,18 @@ footer {
 }
 
 /* **********************madia1 ************************** */
-/* @media (width <=999px) {
+/* @media (width <=1000px) {
 } 最新メディア*/
 
-@media /* (min-width:600px) and  */(max-width: 999px) {
+@media (max-width: 1000px) {
 
     .swiper h1,
     .conceptBoxcontainer h3 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    #conceptWrapper h2 {
+    /* #conceptWrapper  */
+    h2 {
         font-size: 28px;
         margin: 2.5rem 0 1rem;
     }
@@ -483,12 +482,13 @@ footer {
     h4,
     #menuWrapper .menuBox,
     #menuWrapper p {
-        font-size: 24px;
+        font-size: 17px;
     }
 
-    h3{
+    h3 {
         font-size: 20px;
     }
+
     .newscontainer h4,
     p,
     ul {
@@ -504,10 +504,18 @@ footer {
     }
 
     .menuBoxcontainer {
-        display: inline-flex;
-        flex-wrap: wrap;
         gap: 1rem;
         box-sizing: border-box;
+    }
+
+    .sns {
+        display: none;
+    }
+
+    .snsmadia {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .accesscontainer {
@@ -516,35 +524,35 @@ footer {
         align-items: center;
     }
 
-    .sns {
-        display: none;
-    }
-
-    .snsmadia {
-        display: block !important;
-    }
-
-    .accesscontainer .accesscText {
+    .accesscontainer .accesscText,
+    .iframeBox {
         width: 100%;
-    }
-
-    .accesscontainer .accesscText .storename {
-        width: 60%;
     }
 }
 
 /* ************************madia2 ************************ */
-@media (max-width:600px) {
+@media (max-width:650px) {
 
-    .swiper h1,
-    h3 {
+    .swiper h1 {
         font-size: 16px;
         padding: 0.25rem;
     }
 
+    #conceptWrapper h3,
+
+    #menuWrapper h3{
+        font-size: 20px;
+    }
+
+    p,
+    .shinkibusLink,
+    #conceptWrapper li{
+        font-size: 13px;
+    }
+
     .newsText,
-    #menuWrapper .menuText {
-        font-size: 18px;
+    #menuWrapper .menuText
+     {font-size: 16px;
     }
 
     .newscontainer,
@@ -553,7 +561,10 @@ footer {
         width: 100%;
         display: inline-flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.0rem;
         box-sizing: border-box;
     }
+}
+.storename img{
+    width: 80%;
 }

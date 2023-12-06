@@ -1,11 +1,23 @@
 /* JS_drawer v1.0.0 ,2022 */
 /* create by syo motoyama,2022*/
 
-window.addEventListener('scroll', function() {
-    if(scrollY > 90){
-    document.getElementById('headerNav').style.display = 'block';
-   }
+window.addEventListener('scroll', function () {
+    if (window.scrollY >= 100) {
+        document.getElementById('headerNav').style.display = 'block';
+    } else {
+        document.getElementById('headerNav').style.display = 'none';
+    }
 });
+
+// window.addEventListener('scroll', function () {
+//      const toggleButton = this.document.querySelector(.drawer);
+//     if (window.scrollY >= 100) {
+//         document.querySelector('.drawer').style.display = 'block';
+//     } else {
+//         document.querySelector('.drawer').style.display = 'none';
+//     }
+// });
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 document.addEventListener('DOMContentLoaded', function () {
     var toggleButton = document.querySelector('.drawer');

@@ -26,16 +26,16 @@
     background-image: url(../images/close.png);
 }
 
-@media (width <=768px) {
+@media (width <=1000px) {
     .drawer {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         position: fixed;
         inset-block-start: 1.0rem;
         inset-inline-end: 0.25rem;
-        background-image: url(../images/hamburger_green@1.5x.png);
+        background-image: url(../images/maru_rogo2-1@1.5x.png);
         background-position: center;
-        background-size: 3rem;
+        background-size: 4rem;
         background-repeat: no-repeat;
         z-index: 100;
         display: block !important;
@@ -54,6 +54,7 @@
         right: -120%;
         transition: all 0.3s linear;
         margin-top: 5.5rem;
+
         & ul {
             font-size: 12px;
         }
