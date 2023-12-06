@@ -298,7 +298,8 @@ main {
 #menuWrapper .menuImagecircle {
     width: calc(100% / 2 - 1.125rem);
     max-width: 200px;
-    height: auto;
+    /* height: auto; の代わりにaspect-ratio: 1 / 1;いれて比率を横幅とおなじにすることでラテアートiPhone7で縦の伸びしなくなる*/
+    aspect-ratio: 1 / 1;
     max-height: 200px;
     display: flex;
     flex-direction: column;

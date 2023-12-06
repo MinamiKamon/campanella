@@ -38,7 +38,6 @@
         background-size: 4rem;
         background-repeat: no-repeat;
         z-index: 100;
-        display: block !important;
     }
 
     #headerNav {

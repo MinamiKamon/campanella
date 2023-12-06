@@ -9,14 +9,14 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// window.addEventListener('scroll', function () {
-//      const toggleButton = this.document.querySelector(.drawer);
-//     if (window.scrollY >= 100) {
-//         document.querySelector('.drawer').style.display = 'block';
-//     } else {
-//         document.querySelector('.drawer').style.display = 'none';
-//     }
-// });
+window.addEventListener('scroll', function () {
+     const toggleButton = this.document.querySelector(".drawer");
+    if (window.scrollY >= 100) {
+        toggleButton.style.display = 'block';
+    } else {
+        toggleButton.style.display = 'none';
+    }
+});
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 document.addEventListener('DOMContentLoaded', function () {
