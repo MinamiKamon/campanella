@@ -26,7 +26,8 @@
     background-image: url(../images/close.png);
 }
 
-@media (width <=1000px) {
+/* @media (width <=1000px) { */
+@media (max-width: 1000px) {
     .drawer {
         width: 4rem;
         height: 4rem;
@@ -46,7 +47,7 @@
 
     .headerNavmedia {
         display: block !important;
-        width: 100px;
+        width: 30%;
         position: fixed;
         text-align: center;
         padding: 0.5rem;
@@ -55,7 +56,7 @@
         margin-top: 5.5rem;
 
         & ul {
-            font-size: 12px;
+            font-size: 20px;
         }
     }
 
@@ -71,5 +72,21 @@
         list-style-type: none;
         border-radius: 0 0 0 10px;
         display: none;
+    }
+}
+
+@media (max-width:650px) {
+.headerNavmedia /* {
+    display: block !important;
+    width: 30%;
+    position: fixed;
+    text-align: center;
+    padding: 0.5rem;
+    right: -120%;
+    transition: all 0.3s linear;
+    margin-top: 5.5rem;
+
+    &  */ul {
+        font-size: 12px;
     }
 }

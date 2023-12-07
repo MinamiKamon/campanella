@@ -8,7 +8,7 @@
     z-index: 1000;
     transition: all 0.3s linear;
     background-image: url(../images/back_pink2.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
     color: #4d4637;
 
     & .loading_img {
-        width: 30vh;
+        width: 30%;
     }
 
     & #rogo {
