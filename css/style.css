@@ -39,20 +39,14 @@ h3 {
 }
 
 .headerItem {
-    width: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem;
     margin: 0 auto;
 }
 
 .headerWrap img {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    height: auto;
     max-height: 80px;
 }
 
@@ -61,25 +55,9 @@ h3 {
 #headerNav {
     width: 100%;
     background-color: var(--color2);
-    transition: .7s;
-    position: fixed;
     opacity: 0.8;
-    z-index: 200;
-    display: none;
-    /* レスポンシブ時は、消したい */
-}
-
-.headerNavmedia {
-    width: 100%;
-    background-color: var(--color2);
-    transition: .7s;
     position: fixed;
-    z-index: 100;
-    border-radius: 10px;
-    display: none;
-}
-
-.drawer {
+    z-index: 200;
     display: none;
 }
 
@@ -89,6 +67,20 @@ h3 {
     align-items: center;
     font-size: 20px;
     gap: 1rem;
+}
+
+.drawer {
+    display: none;
+}
+
+.headerNavmedia {
+    width: 100%;
+    background-color: var(--color2);
+    /* transition: .7s; */
+    position: fixed;
+    z-index: 100;
+    border-radius: 10px;
+    display: none;
 }
 
 .headerNavmedia ul {
@@ -118,7 +110,6 @@ h3 {
 main {
     background-image: url(../images/back_green.jpg);
     background-repeat: repeat;
-    /* background-size: cover; */
 }
 
 .mainWrapper {
@@ -181,7 +172,6 @@ main {
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
-    /* はみ出したら切ってください */
 }
 
 .swiper-slide img {
@@ -221,9 +211,7 @@ main {
 /* ***************************news********************* */
 
 .newscontainer {
-    height: auto;
     gap: 1rem;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     background-color: var(--bg-color);
@@ -232,12 +220,8 @@ main {
 }
 
 .newscontainer .newsImage {
-    width: clamp(200px, 100%, 400px);
-    /* width: 30%; */
-    height: auto;
-    text-align: center;
+    width: clamp(200px, 100%, 350px);
     object-fit: cover;
-    object-position: center;
     overflow: hidden;
 }
 
@@ -347,50 +331,37 @@ main {
     border-radius: 20px;
 }
 
-/* ********************ここからmenuimg位置調整******************** */
+/* ********************menuImg位置調整******************** */
 .drink1 img {
     object-position: 60%;
 }
 
-#menuWrapper .drink2 img {
+.drink2 img {
     transform: scale(1.125)translateY(10px);
     object-position: 55% 40%;
 }
 
-#menuWrapper .drink3 img {
+.drink3 img {
     transform: scale(1.55)translateX(5px);
     object-position: 100% 115%;
 }
 
-#menuWrapper .drink4 img {
+.drink4 img {
     transform: scale(1.35)translateY(10px)translateX(-15px);
     object-position: 120% 100%;
 }
 
-/* #menuWrapper .food1 img {
-    transform: scale(1.0);
-    object-position:center;
-} */
-
-#menuWrapper .sweets3 img {
+.sweets3 img {
     transform: scale(1.30)translateY(-3.5px);
     object-position: 100% 100%;
 }
 
-#menuWrapper .sweets4 img {
+.sweets4 img {
     transform: scale(1.1);
     object-position: 75% 100%;
 }
 
 /* ***************************sns********************* */
-
-.snscontainer {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    border: 1px solid var(--border);
-}
 
 .sns {
     display: flex;
@@ -401,8 +372,6 @@ main {
 
 .snsmadia {
     display: none;
-    width: 5rem;
-    gap: 2rem;
 }
 
 .snscontainer .tiktok-embed {
@@ -412,7 +381,6 @@ main {
 
 /* ***************************access********************* */
 .accesscontainer {
-    width: 100%;
     display: flex;
     background-color: var(--bg-color);
     gap: 2rem;
@@ -428,15 +396,9 @@ main {
     justify-content: center;
 }
 
-.accesscontainer .accesscText .storename {
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-}
-
 .accesscontainer .shinkibusLink:hover {
     opacity: 0.7;
-    text-decoration: underline solid var(--color) 2px;
+    text-decoration: underline solid var(--color) 1px;
 }
 
 .iframeBox {
@@ -516,7 +478,9 @@ footer {
     .snsmadia {
         width: 150px;
         display: flex;
+        gap: 2rem;
         justify-content: space-between;
+        margin: 0 auto;
     }
 
     .accesscontainer {
@@ -541,19 +505,19 @@ footer {
 
     #conceptWrapper h3,
 
-    #menuWrapper h3{
+    #menuWrapper h3 {
         font-size: 20px;
     }
 
     p,
     .shinkibusLink,
-    #conceptWrapper li{
+    #conceptWrapper li {
         font-size: 13px;
     }
 
     .newsText,
-    #menuWrapper .menuText
-     {font-size: 16px;
+    #menuWrapper .menuText {
+        font-size: 16px;
     }
 
     .newscontainer,
@@ -566,6 +530,7 @@ footer {
         box-sizing: border-box;
     }
 }
-.storename img{
+
+.storename img {
     width: 80%;
 }

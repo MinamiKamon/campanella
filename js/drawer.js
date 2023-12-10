@@ -10,7 +10,7 @@ window.addEventListener('scroll', function () {
 });
 
 window.addEventListener('scroll', function () {
-     const toggleButton = this.document.querySelector(".drawer");
+    const toggleButton = this.document.querySelector(".drawer");
     if (window.scrollY >= 100) {
         toggleButton.style.display = 'block';
     } else {
