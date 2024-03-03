@@ -212,12 +212,12 @@ main {
 /* ***************************news********************* */
 
 .newscontainer {
-    gap: 1rem;
+    gap: 2rem;
     display: flex;
     justify-content: center;
     background-color: var(--bg-color);
     border-radius: 20px;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .newscontainer .newsImage {
