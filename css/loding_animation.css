@@ -16,12 +16,14 @@
     text-align: center;
     color: #4d4637;
 
-    & .loading_img {
-        width: 30%;
+    /* & .loading_img { */
+    & .loading_img #text {
+        width: 20%;
     }
 
     & #rogo {
-        width: 10vh;
+        /* width: 10vh; */
+        width: 30%;
     }
 }
 

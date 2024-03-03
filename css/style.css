@@ -472,18 +472,6 @@ footer {
         box-sizing: border-box;
     }
 
-    .sns {
-        display: none;
-    }
-
-    .snsmadia {
-        width: 150px;
-        display: flex;
-        gap: 2rem;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
     .accesscontainer {
         display: inline-flex;
         flex-direction: column;
@@ -530,7 +518,22 @@ footer {
         gap: 1.0rem;
         box-sizing: border-box;
     }
+
+    .sns {
+        display: none;
+    }
+
+    .snsmadia {
+        display: none;
+        width: 150px;
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 }
+
+
 
 .storename img {
     width: 80%;
